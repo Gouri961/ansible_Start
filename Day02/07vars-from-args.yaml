@@ -4,3 +4,7 @@
   - name: print the information
     ansible.builtin.debug:
       msg: "Hello {{NAME}}, Good {{GREETINGS}}"
+
+#ansible-playbook -i inventory.ini 07vars-from-args.yaml -e "NAME=Gouri GREETINGS=Evening"
+
+# we want to run the variable we have to use -e or --extra-vars in the command line.
