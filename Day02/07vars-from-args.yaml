@@ -1,0 +1,6 @@
+- name: variable to print
+  hosts: EzyDevOps
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hello {{name}}, Good {{Greetings}}"
