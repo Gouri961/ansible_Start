@@ -7,8 +7,8 @@
       - httpd
       - nginx
   tasks:
-    - name: Install multiple packages
-      ansible.builtin.package:
+    - name: Install packages
+      ansible.builtin.yum:
         name: "{{ my_packages }}"
         state: present    
   
