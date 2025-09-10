@@ -1,5 +1,5 @@
 - name: variables to print
-  hosts: Gouri
+  hosts: EzyDevOps
   tasks:
   - name: print the information
     ansible.builtin.debug:
