@@ -1,14 +1,19 @@
----
-- name: To install httpd and nginx
+- name: writing on filters and functions
   hosts: EzyDevOps
-  gather_facts: no
-  vars:
-    my_packages:
-      - httpd
-      - nginx
-  tasks:
-    - name: Install packages
-      ansible.builtin.yum:
-        name: "{{ my_packages }}"
-        state: present    
-  
+  connection: EzyDevOps
+  tasks: 
+  - name: print the default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ course | default('DevOps') }}"
+
+  - name: print the variable in upper case
+    vars:
+      greeting: 'Hello Satish'
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
+
+  - name: print the variable in lower case
+    vars:
+      greeting: 'Hello Satish'  
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
