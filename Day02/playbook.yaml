@@ -1,0 +1,15 @@
+- name: devops course information
+  hosts: Gouri
+  vars:
+    course: DevOps
+    duration: 60 days
+    topics:
+      - Linux
+      - docker
+      - Ansible
+      - Terraform
+      - AzureVM
+  tasks:
+    - name: display message
+      ansible.builtin.debug:
+        msg: "Welcome to DevOps Course"
