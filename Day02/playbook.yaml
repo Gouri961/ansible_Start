@@ -10,6 +10,6 @@
       - Terraform
       - AzureVM
   tasks:
-    - name: display message
+    - name: print the course information
       ansible.builtin.debug:
-        msg: "Welcome to DevOps Course"
+        msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}"
