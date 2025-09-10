@@ -6,14 +6,20 @@
     ansible.builtin.debug:
       msg: "Hello {{ course | default('DevOps') }}"
 
-  - name: print the variable in upper case
+  - name: convert to uppercase
     vars:
       greeting: 'Hello Satish'
     ansible.builtin.debug:
-      msg: "{{ greeting | upper }}"
+      msg: " {{ greeting | upper }}"
 
-  - name: print the variable in lower case
+  - name: convert to lowercase
     vars:
       greeting: 'Hello Satish'  
     ansible.builtin.debug:
-      msg: "{{ greeting | lower }}"
+      msg: " {{ greeting | lower }}"
+
+  - name: get the unique values
+    vars:
+      numbers: [1,2,3,4,5,6,7,8,9,1,2,15,15,16,17,17,16,3,4,5]
+    ansible.builtin.debug:
+      msg: " {{ numbers | unique }}"
