@@ -1,3 +1,4 @@
+---
 - name: To install httpd and nginx
   hosts: EzyDevOps
   gather_facts: no
