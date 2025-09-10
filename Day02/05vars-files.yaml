@@ -1,8 +1,8 @@
 - name: variables to print
   hosts: EzyDevOps
   vars_files:
-    - Vars.yaml
+  - vars.yaml
   tasks:
-  - name: print the information
+  - name: print the course information
     ansible.builtin.debug:
       msg: "Hi, I am learning {{course}}, duration is: {{duration}}, provider: {{provider}}"  
