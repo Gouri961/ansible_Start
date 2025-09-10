@@ -1,0 +1,10 @@
+- name: variables to print
+  hosts: EzyDevOps
+  vars:
+    course: Ansible with Azure
+    duration: 20hours
+    provider: RedHAt
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{course}}, duration is: {{duration}}, provider: {{provider}}"

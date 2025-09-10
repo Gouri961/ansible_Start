@@ -3,4 +3,4 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hi, I am learning ansbile with azure, course duration: 20hours, tariner: RedHat"
+      msg: "Hi, I am learning ansbile with azure, course duration: 20hours, provider: RedHat"
