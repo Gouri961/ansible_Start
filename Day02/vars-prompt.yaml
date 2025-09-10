@@ -1,0 +1,17 @@
+- name: variables to prompt
+  hosts: EzyDevOps
+  vars_prompt:
+  - name: course
+    prompt: Enter the course name
+    private: no
+  - name: duration
+    prompt: Enter the duration
+    private: no
+  - name: provider
+    prompt: Enter the provider
+    private: yes
+
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{course}}, duration is: {{duration}}, provider:{{provider}}"
