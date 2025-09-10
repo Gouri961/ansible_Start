@@ -1,0 +1,13 @@
+- name: To install httpd and nginx
+  hosts: EzyDevOps
+  gather_facts: no
+  vars:
+    my_packages:
+      - httpd
+      - nginx
+  tasks:
+    - name: Install multiple packages
+      ansible.builtin.package:
+        name: "{{ my_packages }}"
+        state: present    
+  
