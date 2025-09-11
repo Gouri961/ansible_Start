@@ -15,7 +15,7 @@
   
   - name: update nginx default index page
     ansible.builtin.copy:
-      dest: /var/www/html/index.nginx-debain.html
+      dest: /var/www/html/index.nginx-debian.html
       content: "Welcome to Ezy DevOps\n"
       owner: www-data
       group: www-data
