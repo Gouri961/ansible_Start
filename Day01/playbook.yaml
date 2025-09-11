@@ -11,4 +11,12 @@
     ansible.builtin.service:
       name: nginx
       state: started
-      
+      enabled: yes
+  
+  - name: update nginx default index page
+    ansible buildin.copy:
+      dest: /var/www/html/index.nginx-debain.html
+      content: "Welcome to Ezy DevOps\n"
+      owner: www-data
+      group: www-data
+      mode: '0644'
