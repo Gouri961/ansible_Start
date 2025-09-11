@@ -1,5 +1,5 @@
 - name: nginx install and run
-  hosts: AzureVM
+  hosts: Azurevm
   become: yes
   tasks:
   - name: install nginx
@@ -16,7 +16,7 @@
   - name: update nginx default index page
     ansible.builtin.copy:
       dest: /var/www/html/index.nginx-debian.html
-      content: "Welcome to Ezy DevOps\n"
+      content: "Welcome to tirupati"
       owner: www-data
       group: www-data
       mode: '0644'
