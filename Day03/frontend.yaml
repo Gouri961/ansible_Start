@@ -26,6 +26,11 @@
       url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
       dest: /tmp/frontend.zip
 
+  - name: install unzip
+    ansible.builtin.package:
+      name: unzip
+      state: present
+
   - name: extract the code
     ansible.builtin.unarchive:
       src: /tmp/frontend.zip #by default ansible thinks this is in ansible server
