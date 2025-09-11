@@ -1,0 +1,22 @@
+- name: nginx install and run
+  hosts: Azurevm
+  become: yes
+  tasks:
+    - name: install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: run nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: update nginx default index page
+      ansible.builtin.copy:
+        dest: /var/www/html/index.nginx-debian.html
+        content: "Welcome to tirupati"
+        owner: www-data
+        group: www-data
+        mode: '0644'
